@@ -33,10 +33,11 @@ const Tabs=createBottomTabNavigator();
 const TabsNavigator = () => {
     const navigation = useNavigation();
     useEffect(()=> {
-      const isLoggedIn= false
-      if(!isLoggedIn) {
-          navigation.navigate("SignUp");
-      }
+      firebase.auth().onAuthStateChanged(user => {
+        if(!user){
+           navigation.navigate("SignUp");
+        }
+      })
 
   },[])
   return(
