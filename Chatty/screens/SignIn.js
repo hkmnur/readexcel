@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { Text ,View} from "react-native";
+import {View} from "react-native";
 import { TextInput ,Button,Subheading} from "react-native-paper";
 import firebase from 'firebase/app'
 import {useNavigation} from "@react-navigation/core";

@@ -1,7 +1,7 @@
 import React,{useState} from "react";
-import { Text ,View} from "react-native";
+import {View} from "react-native";
 import { TextInput ,Button,Subheading} from "react-native-paper";
-import firebase from 'firebase/app'
+import firebase from 'firebase/app';
 import {useNavigation} from "@react-navigation/core";
 
 
@@ -15,7 +15,7 @@ const SignUp = () => {
     const [error,setError]=useState("");
 
 
-    const navigation=useNavigation()
+    const navigation=useNavigation();
 
     const createAccount = async () =>{
         setIsLoading(true)
@@ -38,7 +38,7 @@ const SignUp = () => {
 
             {!!error &&(
                 <Subheading style={{color:'red',textAlign:'center',marginBottom:16}}> 
-                {error}
+                    {error}
                 </Subheading>
             )}
             <TextInput 
